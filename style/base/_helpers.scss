@@ -1,0 +1,43 @@
+/* Media queries */
+$desktop-width: 1100px;
+$big-tablet-width: 1024px;
+$tablet-width: 768px;
+$mob-width: 480px;
+$mob-mini-width: 385px;
+
+/* Colors */
+
+$color-paper: #fff7e0;
+$color-black: #000;
+$color-white: #fff;
+$color-orange: #f5ac32;
+$color-primary: #6101ff;
+$color-secondary: #fff5e2;
+$color-tertiary: #f9f6ff;
+
+$title-sizes: (
+        xxs: (
+                desktop: 18px),
+        xs: (
+                desktop: 21px,
+                tablet: 19px),
+        s: (
+                desktop: 24px,
+                tablet: 20px),
+        m: (
+                desktop: 32px,
+                tablet: 24px,
+                mobile: 20px),
+        l: (
+                desktop: 40px,
+                tablet: 32px,
+                mobile: 26px),
+        xl: (
+                desktop: 44px,
+                tablet: 32px,
+                mobile: 28px),
+        xxl: (
+                desktop: 60px,
+                big-tablet: 42px,
+                mobile: 38px),
+);

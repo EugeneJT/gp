@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("/fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("/fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("/fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("/fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+  font-family: "MyriadProBold";
+  src: url("/fonts/MyriadProBold/MyriadProBold.eot");
+  src: url("/fonts/MyriadProBold/MyriadProBold.eot?#iefix")format("embedded-opentype"),
+  url("/fonts/MyriadProBold/MyriadProBold.woff") format("woff"),
+  url("/fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'MyriadProRegular', Arial, Sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+.wrapper {
+    @include margin-auto;
+    max-width: 1230px;
+    padding: 0 15px;
+}
+
+
+.division {
+    position: relative;
+    padding: 80px 0 0;
+  
+    @include tablet-down {
+      padding: 60px 0 0;
+    }
+  
+    &--al_center {
+      text-align: center;
+    }
+  
+    &--bgr_grey {
+      background: $color-tertiary;
+    }
+
+    &--bgr_light {
+      background: $color-secondary;
+    }
+  
+    &--border-b {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  
+    &__big-push {
+      @include margin-b(80px);
+  
+      @include tablet-down {
+        @include margin-b(60px);
+      }
+    }
+  
+    &__mid-push {
+      @include margin-b(45px);
+  
+      @include tablet-down {
+        @include margin-b(38px);
+      }
+    }
+  
+    &__small-push {
+      @include margin-b(30px);
+    }
+
+    &__double-push {
+      margin: 30px 0 20px;
+    }
+  
+    &__title {
+      text-align: center;
+      @include margin-b(60px);
+  
+      @include tablet-down {
+        @include margin-b(40px);
+      }
+    }
+  }
+  
+  .flex {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  
+    @include big-tablet-down {  
+      flex-wrap: wrap;
+    }
+    @include tablet-down {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+    &__item {
+      &:not(:last-child) {
+        margin-right: 30px;
+
+        @include tablet-down {
+          margin: 0 0 30px;
+        }
+      }
+      &:nth-child(2n) {
+        @include big-tablet-down {  
+          margin: 0 0 30px;
+        }
+      }
+
+      @include big-tablet-down {  
+        flex-basis: calc(50% - 15px);
+        flex-grow: 0;
+      }
+
+      @include tablet-down {
+        text-align: center;
+      }
+
+
+  
+    }  
+  }
+
